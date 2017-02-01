@@ -4,6 +4,7 @@
 */
 function Mostar()
 {
-	
+	var n = prompt("INGRESE YA!");
+	document.getElementById("elNombre").value = n;
 }
 

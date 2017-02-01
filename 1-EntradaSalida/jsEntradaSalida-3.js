@@ -2,7 +2,7 @@
 y luego mostrarlo por 'Alert' al presionar el botón  'MOSTRAR'*/
 function Mostar()
 {
-	var n = document.getElementsByTagName('elNombre').value;
+	var n = document.getElementById("elNombre").value;
 	alert(n);
 }
 
