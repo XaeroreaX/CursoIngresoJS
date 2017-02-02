@@ -4,6 +4,8 @@
 */
 function Mostar()
 {
+	alert("este es el ejercicio 4");
+
 	var n = prompt("INGRESE YA!");
 	document.getElementById("elNombre").value = n;
 }
