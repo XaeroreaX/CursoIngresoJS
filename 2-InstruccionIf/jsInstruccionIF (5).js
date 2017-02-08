@@ -10,7 +10,7 @@ function Mostrar()
 	}
 	else
 	{    
-		if(Edad < 13 || Edad > 17) // me confundi con el or
+		if(Edad < 13 || Edad > 17) // me confundi con el or, tambien se puede hacer if(!(Edad >= 13 && Edad <= 17))
 			alert("no es adolescente");
 		
 	}
