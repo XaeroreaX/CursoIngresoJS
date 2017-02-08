@@ -4,7 +4,7 @@ function Mostrar()
 {
 //tomo la edad  
 	var Niña=document.getElementById("edad").value;
-	if(Niña==15)// desigualdad como en c es !=
+	if(parseInt(Niña)==15)// desigualdad como en c es !=
 	{
 		alert("niña bonita");
 	}
