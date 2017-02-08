@@ -5,5 +5,5 @@ function Mostrar()
 	var edad = document.getElementById("edad").value;
 	var ECivil = document.getElementById("estadoCivil").value;
 	if(parseInt(edad) <= 18 && ECivil != "Soltero")
-		alert("Es muy pequeño para NO ser soltero.")
+		alert("Es muy pequeño para NO ser soltero.");
 }//FIN DE LA FUNCIÓN

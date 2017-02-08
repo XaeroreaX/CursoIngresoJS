@@ -5,7 +5,7 @@ var Edad = document.getElementById("edad").value;
 	Edad = parseInt(Edad);
 	if(Edad <= 0)
 	{
-		alert("AVISO:ingrese bien la edad!")
+		alert("AVISO:ingrese bien la edad!");
 	}
 	else
 	{                                         //emplando if anidado               
