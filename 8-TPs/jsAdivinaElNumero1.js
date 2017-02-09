@@ -17,18 +17,19 @@ function comenzar()
 	numeroSecreto = parseInt(numeroSecreto);
 	numeroSecreto = Math.floor((Math.random() * 100) + 7);
 		//alert(numeroSecreto );
-		console.log(numeroSecreto);
+		console.log(numeroSecreto); //aqui ves una variable en la consola
 	contadorIntentos=0;
 	document.getElementById('intentos').value=contadorIntentos;
 }
 
 function verificar()
 {
+	// crear contador
 	contadorIntentos=contadorIntentos+1;
-
+	// mostrar en los id
 	document.getElementById('intentos').value=contadorIntentos;
-	
 	var numeroIngresado= document.getElementById('numero').value;
+	// calcular para darle pistas al usuario
 	if(numeroSecreto==numeroIngresado)
 	{
 		alert("son un genio");
