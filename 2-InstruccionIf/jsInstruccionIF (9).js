@@ -5,7 +5,7 @@ function Mostrar()
 	//generacion de numeros random Math.random() * numPosibilidades 
 	var NunRandom;
 	NunRandom = parseInt(NunRandom);
-	NunRandom = parseInt(Math.random() * 10)+1;
+	NunRandom = Math.floor((Math.random() * 10) + 1);//Math.floor((Math.random() * 10) + 1)
 	alert(NunRandom);
 	document.getElementById("FormIngreso").value = NunRandom;
 
