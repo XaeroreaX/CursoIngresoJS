@@ -13,36 +13,41 @@ var contadorIntentos;
 function comenzar()
 {
 	//Genero el número RANDOM entre 1 y 100
-	 
 	numeroSecreto = parseInt(numeroSecreto);
-	numeroSecreto = Math.floor((Math.random() * 100) + 7);
+	numeroSecreto =  Math.floor((Math.random() * 100) + 1);
+	console.log(numeroSecreto); 	
 		//alert(numeroSecreto );
-		console.log(numeroSecreto); //aqui ves una variable en la consola
-	contadorIntentos=0;
-	document.getElementById('intentos').value=contadorIntentos;
+	
+	contadorIntentos = 0; // iniciando el contador
+	document.getElementById("intentos").value = contadorIntentos;
+
+
 }
 
 function verificar()
 {
-	// crear contador
-	contadorIntentos=contadorIntentos+1;
-	// mostrar en los id
-	document.getElementById('intentos').value=contadorIntentos;
-	var numeroIngresado= document.getElementById('numero').value;
-	// calcular para darle pistas al usuario
-	if(numeroSecreto==numeroIngresado)
+	contadorIntentos = contadorIntentos + 1;
+	document.getElementById("intentos").value = contadorIntentos;
+	var numeroIngresado = document.getElementById('numero').value;
+
+	if(numeroIngresado == numeroSecreto) //compararemos el numero ingresado
 	{
-		alert("son un genio");
+		alert("usted es el ganador!!!");
+
 	}
 	else
 	{
-		if(numeroSecreto>numeroIngresado)
+		if(numeroIngresado<numeroSecreto)
 		{
-			alert("falto un toque");
-		}else
+			alert("Le falto un toque");
+		}
+		else
 		{
 			alert("te pasaste");
 		}
+
 	}
+
+
 	
 }
