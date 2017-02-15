@@ -8,7 +8,92 @@ E.	Si el importe final con descuento suma más de $120  se debe sumar un 10% de 
  ”Usted pago X de IIBB.”, siendo X el impuesto que se pagó. 
 
  */
+
+
+//var lamparitas = 35;
 function CalcularPrecio () 
 {
- 	
+	var cantLamparas = document.getElementById("Cantidad").value;
+ 	cantLamparas = parseInt(cantLamparas);
+ 	var marca = document.getElementById("Marca").value;
+ 	var importe = parseInt(importe);
+
+ 	if(cantLamparas<3) // todo descuento es mayor que 2 cantLamparas
+ 	{
+ 		importe = cantLamparas * 35 ;
+ 	}
+ 	else
+ 	{
+ 		switch(cantLamparas) //contemplamos las demas opciones y las que son muy especificas
+ 		{
+ 			case 3:
+ 				importe = DescuentoD(marca, cantLamparas);
+ 				break;
+ 			case 4:
+ 				importe = DescuentoC(marca, cantLamparas);
+ 				break;
+ 			case 5:
+				importe = DescuentoB(marca, cantLamparas); 				
+ 				break;
+ 			default:
+ 				importe = cantLamparas * (35 * 0.5);
+ 		}
+ 	}
+ 	if(importe>120)
+ 	{
+ 		var IIBB = parseInt(IIBB);
+ 		IIBB = importe * 0.1;
+ 		importe = importe + IIBB;
+ 		alert("Usted pago "+IIBB+" de IIBB.")
+ 	}
+
+ 	document.getElementById("precioDescuento").value = importe; //mostrando importe
+ 	//alert(importe);
+}
+
+function DescuentoD(marca, cantLamparas)
+{
+	var x = parseInt(x);
+	switch(marca)
+	{
+		case "ArgentinaLuz":
+			x = cantLamparas * (35 * 0.85);
+			break;
+		case "FelipeLamparas":
+			x = cantLamparas * (35 * 0.9);
+			break;
+		default:
+			x = cantLamparas * (35 * 0.95);
+
+	}
+
+	return x;
+}
+
+
+function DescuentoC(marca, cantLamparas)
+{
+	var x = parseInt(x);
+	if(marca == "ArgentinaLuz" || marca == "FelipeLamparas")
+	{
+		x = cantLamparas * (35 * 0.75);
+	}
+	else
+	{
+		x = cantLamparas * (35 * 0.8);
+	}
+
+	return x;
+}
+
+function DescuentoB(marca, cantLamparas)		
+{
+	var x = parseInt(x);
+	x = cantLamparas * (35 * 0.7);
+	if(marca == "ArgentinaLuz")
+	{
+		x = cantLamparas * (35 * 0.6);
+	}
+
+	return x;
 }
