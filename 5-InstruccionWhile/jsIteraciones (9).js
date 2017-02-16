@@ -25,15 +25,12 @@ function Mostrar()
 		else
 		{
 
-			if(numero < menor) //aca sacamos los mayores y los minimos de cada ingreso de numero
-			{
+			if(numero < menor) 
 				menor = numero;
-			}
-			else
-			{
+							
 			if(numero>mayor)
 				mayor = numero;
-			}//if(numero < menor)
+			//aca sacamos los mayores y los minimos de cada ingreso de numero
 
 
 		}//if(contador==1)
